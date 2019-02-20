@@ -1,0 +1,15 @@
+lst = list(map(int, input().split()))
+max1 = max(lst)
+lst.remove(max1)
+max2 = max(lst)
+lst.remove(max2)
+max3 = max(lst)
+lst.append(max2)
+lst.append(max1)
+min1 = min(lst)
+lst.remove(min1)
+min2 = min(lst)
+if min1 * min2 * max1 > max1 * max2 * max3:
+    print(min1, min2, max1)
+else:
+    print(max3, max2, max1)
